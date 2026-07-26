@@ -6,6 +6,10 @@
   --link: #224b8d;
   --link-hover: #1b3c71;
   --accent: #00369f;
+  --page-width: 1480px;
+  --page-gutter: 28px;
+  --sidebar-width: 230px;
+  --column-gap: 48px;
 }
 
 *,
@@ -102,10 +106,10 @@ hr {
 .site-nav {
   display: flex;
   align-items: center;
-  width: min(100%, 925px);
+  width: min(100%, var(--page-width));
   min-height: 48px;
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 0 var(--page-gutter);
   font-size: 1rem;
 }
 
@@ -175,11 +179,11 @@ hr {
 
 .site-layout {
   display: grid;
-  grid-template-columns: 15.2542% minmax(0, 1fr);
-  gap: 1.6949%;
-  width: min(100%, 925px);
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  gap: var(--column-gap);
+  width: min(100%, var(--page-width));
   margin: 1em auto 0;
-  padding: 0 1em;
+  padding: 0 var(--page-gutter);
 }
 
 .profile-sidebar {
@@ -187,7 +191,7 @@ hr {
   min-width: 0;
 }
 
-@media (min-width: 925px) {
+@media (min-width: 981px) {
   .profile-sidebar {
     position: sticky;
     top: 6em;
@@ -200,7 +204,7 @@ hr {
 
 .profile-photo {
   display: block;
-  width: 100%;
+  width: min(100%, 190px);
   aspect-ratio: 1;
   padding: 5px;
   border: 1px solid var(--line);
@@ -270,7 +274,6 @@ hr {
 
 .content-column {
   min-width: 0;
-  padding-left: 4.2373%;
 }
 
 .about-section {
@@ -314,15 +317,15 @@ hr {
 .paper-box-image {
   display: flex;
   justify-content: flex-start;
-  min-width: 200px;
-  max-width: 40%;
-  flex: 0 0 40%;
+  min-width: 240px;
+  max-width: 42%;
+  flex: 0 0 42%;
 }
 
 .paper-box-text {
-  max-width: 60%;
-  flex: 0 0 60%;
-  padding-left: 2em;
+  max-width: 58%;
+  flex: 0 0 58%;
+  padding-left: 2.5em;
 }
 
 .paper-box-image a {
@@ -391,23 +394,15 @@ hr {
 }
 
 .site-footer {
-  width: min(100%, 925px);
+  width: min(100%, var(--page-width));
   margin: 0 auto;
-  padding: 2em 1em 3em;
+  padding: 2em var(--page-gutter) 3em;
   color: var(--muted);
   font-size: 0.85em;
   text-align: right;
 }
 
-@media (min-width: 1280px) {
-  .site-nav,
-  .site-layout,
-  .site-footer {
-    max-width: 1280px;
-  }
-}
-
-@media (max-width: 925px) {
+@media (max-width: 980px) {
   .site-layout {
     grid-template-columns: 1fr;
     gap: 1em;
