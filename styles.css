@@ -383,7 +383,9 @@ hr {
 }
 
 .paper-box-text p:first-child > a {
-  font-weight: 400;
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 1.35;
 }
 
 .paper-links {
