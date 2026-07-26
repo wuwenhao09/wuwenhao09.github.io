@@ -6,10 +6,10 @@
   --link: #224b8d;
   --link-hover: #1b3c71;
   --accent: #00369f;
-  --page-width: 1480px;
+  --page-width: 1380px;
   --page-gutter: 28px;
-  --sidebar-width: 230px;
-  --column-gap: 48px;
+  --sidebar-width: 220px;
+  --column-gap: 44px;
 }
 
 *,
@@ -130,7 +130,8 @@ hr {
 
 .site-home {
   margin-left: 0 !important;
-  padding-right: 2em !important;
+  margin-right: 0 !important;
+  padding-right: 0 !important;
   color: var(--heading) !important;
   font-weight: 700;
 }
@@ -139,7 +140,16 @@ hr {
   display: flex;
   align-items: center;
   min-width: 0;
+  margin-left: auto;
   overflow-x: auto;
+}
+
+.desktop-nav a:first-child {
+  margin-left: 0;
+}
+
+.desktop-nav a:last-child {
+  margin-right: 0;
 }
 
 .mobile-nav {
